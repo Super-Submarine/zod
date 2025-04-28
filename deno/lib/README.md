@@ -7,6 +7,8 @@
     TypeScript-first schema validation with static type inference
   </p>
 </p>
+<!-- Devin dummy change for PR verification -->
+
 <br/>
 <p align="center">
 <a href="https://github.com/colinhacks/zod/actions?query=branch%3Amain"><img src="https://github.com/colinhacks/zod/actions/workflows/test.yml/badge.svg?event=push&branch=main" alt="Zod CI status" /></a>
