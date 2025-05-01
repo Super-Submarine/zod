@@ -7,9 +7,6 @@
     TypeScript-first schema validation with static type inference
   </p>
 </p>
-<!-- Devin dummy change for PR verification -->
-Devin PR verification test - 1746018146
-testing devin in awake mode
 
 <br/>
 <p align="center">
