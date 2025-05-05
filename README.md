@@ -47,6 +47,7 @@
 
 > These docs have been translated into [Chinese](./README_ZH.md).
 > This is a dummy PR change for demonstration purposes.
+> This is another dummy PR change for demonstration purposes.
 
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
