@@ -34,7 +34,7 @@
   <br />
 </div>
 
-*devin and kush edited it*
+*co edited by devin and requested by kush*
 
 <br/>
 <br/>
