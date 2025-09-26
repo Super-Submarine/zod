@@ -1,0 +1,350 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overview",
+      "purpose": "Introduce Zod as a TypeScript-first schema validation library, covering its main features, design philosophy, and core capabilities",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Installation and Setup",
+      "purpose": "Guide users through installing Zod and basic setup for different environments (Node.js, Deno, browsers)",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Quick Start",
+      "purpose": "Provide immediate examples of basic schema definition and validation to get users started quickly",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Core Concepts",
+      "purpose": "Explain fundamental concepts like schema definition, validation pipeline, type inference, and the relationship between runtime and compile-time types etc.",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema Definition",
+      "purpose": "Deep dive into how schemas are created and the ZodType base class architecture",
+      "parent": "Core Concepts",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Validation Pipeline",
+      "purpose": "Explain the internal validation flow, ParseContext, ParseStatus, and how data flows through the system",
+      "parent": "Core Concepts",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema Types",
+      "purpose": "Comprehensive reference for all schema types available in Zod",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Primitive Types",
+      "purpose": "Cover string, number, boolean, date, bigint, and other primitive schema types with their validation methods",
+      "parent": "Schema Types",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Object Schemas",
+      "purpose": "Detailed coverage of object validation, including shape definition, key handling, and object manipulation methods",
+      "parent": "Schema Types",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Array and Tuple Schemas",
+      "purpose": "Cover array validation, tuple definitions, length constraints, and element validation",
+      "parent": "Schema Types",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Union and Intersection",
+      "purpose": "Explain union types (OR logic) and intersection types (AND logic) with discriminated unions",
+      "parent": "Schema Types",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Record and Collection Types",
+      "purpose": "Cover Record, Map, Set schemas and validation of key-value collections",
+      "parent": "Schema Types",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Enum and Literal Types",
+      "purpose": "Cover enum schemas, literal values, and native TypeScript enum integration",
+      "parent": "Schema Types",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Special Types",
+      "purpose": "Cover function schemas, promise validation, instanceof checks, and custom schema types",
+      "parent": "Schema Types",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Validation and Parsing",
+      "purpose": "Comprehensive guide to parsing methods, validation options, and data processing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Parse Methods",
+      "purpose": "Detail the differences between .parse(), .safeParse(), and their async variants",
+      "parent": "Validation and Parsing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Async Validation",
+      "purpose": "Cover asynchronous parsing, async refinements, and promise-based validation",
+      "parent": "Validation and Parsing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema Transformations",
+      "purpose": "Explain .transform(), .default(), and data transformation capabilities",
+      "parent": "Validation and Parsing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Custom Refinements",
+      "purpose": "Cover .refine() and .superRefine() for custom validation logic",
+      "parent": "Validation and Parsing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema Composition",
+      "purpose": "Cover advanced schema manipulation like .partial(), .pick(), .omit(), .extend()",
+      "parent": "Validation and Parsing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Error Handling",
+      "purpose": "Complete guide to Zod's error system, error formatting, and custom error messages",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "ZodError Structure",
+      "purpose": "Explain the ZodError class, ZodIssue types, and error categorization",
+      "parent": "Error Handling",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Error Formatting",
+      "purpose": "Cover .format(), .flatten(), and different ways to present validation errors",
+      "parent": "Error Handling",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Custom Error Messages",
+      "purpose": "Explain error maps, custom error messages, and internationalization support",
+      "parent": "Error Handling",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Advanced Usage",
+      "purpose": "Advanced patterns, recursive types, utility functions, and complex schema scenarios",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Recursive Types",
+      "purpose": "Cover z.lazy() and handling self-referencing schemas",
+      "parent": "Advanced Usage",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Utility Types and Helpers",
+      "purpose": "Cover z.infer, utility functions, and type manipulation helpers",
+      "parent": "Advanced Usage",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Development",
+      "purpose": "Guide for contributors and information about the development process",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Contributing",
+      "purpose": "Instructions for contributing to Zod, development setup, and coding standards",
+      "parent": "Development",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Build System",
+      "purpose": "Explain the multi-platform build process, package configuration, and distribution",
+      "parent": "Development",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Testing",
+      "purpose": "Overview of the test suite, cross-platform testing, and test organization",
+      "parent": "Development",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Architecture",
+      "purpose": "Deep dive into Zod's internal architecture, design decisions, and implementation details",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Type System Design",
+      "purpose": "Explain the ZodType hierarchy, type inference mechanism, and internal type structures",
+      "parent": "Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Multi-Platform Support",
+      "purpose": "Explain how Zod supports Node.js, Deno, and browsers with shared codebase",
+      "parent": "Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Documentation Website",
+      "purpose": "Information about the Zod documentation site, blog, and community resources",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
