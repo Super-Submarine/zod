@@ -1,0 +1,280 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overview",
+      "purpose": "Introduce the Zod repository, explaining what Zod is, its purpose as a TypeScript-first schema validation library, and provide a high-level overview of the repository structure and key features",
+      "page_notes": [
+        {
+          "content": "should be highly detailed with erd diagrams for each part and responsibility"
+        }
+      ]
+    },
+    {
+      "title": "Core Architecture",
+      "purpose": "Deep dive into the fundamental architecture of Zod, covering the schema system, validation engine, and how they work together to provide runtime validation and static type inference",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema System",
+      "purpose": "Explain the core schema system, including how schemas are defined, the $ZodType interface, primitive and complex types, and the internal structure of schema instances",
+      "parent": "Core Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Validation Engine",
+      "purpose": "Document the validation pipeline, including the parse/safeParse methods, synchronous vs asynchronous validation, check execution, and error generation",
+      "parent": "Core Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Type System and Inference",
+      "purpose": "Explain how Zod bridges TypeScript's static type system with runtime validation, covering z.infer, z.input, z.output, and the dual-layer type safety architecture",
+      "parent": "Core Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "API Variants",
+      "purpose": "Overview of the three different API surfaces Zod provides (Classic, Mini, and v3 Legacy) and guidance on which to use",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Classic API",
+      "purpose": "Document the method-chaining Classic API (z.string().min(5).email()), which is the default and most feature-rich interface",
+      "parent": "API Variants",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Mini API",
+      "purpose": "Document the functional, tree-shakable Mini API, explaining its design philosophy, usage patterns, and when to choose it over Classic",
+      "parent": "API Variants",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "V3 Legacy API",
+      "purpose": "Explain the v3 API maintained for backward compatibility, migration path from v3 to v4, and breaking changes",
+      "parent": "API Variants",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Advanced Features",
+      "purpose": "Overview of advanced Zod features including codecs, error customization, JSON Schema conversion, and metadata",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Codecs and Bidirectional Transforms",
+      "purpose": "Document the codec system for bidirectional transformations, including encode/decode operations, type safety in transformations, and use cases",
+      "parent": "Advanced Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Error Customization and Localization",
+      "purpose": "Explain error customization mechanisms (schema-level, per-parse, global), the localization system with 40+ languages, and error precedence chain",
+      "parent": "Advanced Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "JSON Schema Conversion",
+      "purpose": "Document the toJSONSchema() system, including the conversion pipeline, handling of different schema types, cycles and reuse, and configuration options",
+      "parent": "Advanced Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Metadata and Registries",
+      "purpose": "Explain the metadata system, global and custom registries, and how to attach descriptions, examples, and custom metadata to schemas",
+      "parent": "Advanced Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Version Management",
+      "purpose": "Explain Zod's versioning strategy, including subpath exports, backward compatibility approach, and the v4 release",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Versioning Strategy",
+      "purpose": "Document the subpath versioning approach (zod/v3, zod/v4, zod/v4/mini), shared core types, and how library authors can depend on Zod",
+      "parent": "Version Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "V4 Release Notes",
+      "purpose": "Comprehensive documentation of Zod v4 features, performance improvements (14x faster parsing), breaking changes, and migration guide",
+      "parent": "Version Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Repository Structure and Build System",
+      "purpose": "Explain the monorepo structure, package organization, and how the build system works",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Monorepo Organization",
+      "purpose": "Document the pnpm workspace structure, packages within the monorepo (zod, docs, bench, treeshake, resolution, tsc), and their relationships",
+      "parent": "Repository Structure and Build System",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Build Pipeline",
+      "purpose": "Explain the build process using zshy compiler, generation of multiple module formats (ESM, CJS, types), and the postbuild stub generation",
+      "parent": "Repository Structure and Build System",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "CI/CD and Release Automation",
+      "purpose": "Document the GitHub Actions workflows for testing, building, and releasing to npm and JSR, including normal releases vs canary releases",
+      "parent": "Repository Structure and Build System",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Testing and Quality Assurance",
+      "purpose": "Overview of the testing strategy, including unit tests, benchmarking, and bundle size analysis",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Test Suite",
+      "purpose": "Document the test structure, testing patterns for schemas and validation, and how tests are organized across API variants",
+      "parent": "Testing and Quality Assurance",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Benchmarking System",
+      "purpose": "Explain the benchmarking suite in packages/bench, comparison methodology across Zod versions and competitor libraries, and performance metrics",
+      "parent": "Testing and Quality Assurance",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Ecosystem and Integration",
+      "purpose": "Overview of the Zod ecosystem, including community integrations, how to integrate Zod into libraries, and the ecosystem documentation",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Ecosystem Overview",
+      "purpose": "Catalog of 70+ ecosystem resources including API libraries (tRPC, oRPC), form integrations, converters, mocking libraries, and utilities",
+      "parent": "Ecosystem and Integration",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Library Authors Guide",
+      "purpose": "Comprehensive guide for library authors on integrating Zod, including peer dependency configuration, supporting multiple Zod versions, and accepting user-defined schemas",
+      "parent": "Ecosystem and Integration",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Contributing to Zod",
+      "purpose": "Guide for contributors covering development setup, contribution workflow, coding standards, and how to submit pull requests",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
