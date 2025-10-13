@@ -34,7 +34,9 @@
   <br />
 </div>
 
-*co edited by devin and requested by kush*
+_co edited by devin and requested by kush_
+
+> This edit is by devin
 
 <br/>
 <br/>
