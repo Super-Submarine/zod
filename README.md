@@ -41,6 +41,8 @@ _co edited by devin and requested by kush_
 <br/>
 <br/>
 
+<!-- Test comment for dummy PR verification -->
+
 <!-- <p><strong>Announcement ✨</strong> Zod has recieved the <a href="https://go.clerk.com/zod-clerk">Clerk</a> OSS Fellowship!<br/>Read the announcement post 👉 <a href="https://go.clerk.com/zod-clerk">clerk.com/blog/zod-fellowship</a></p> -->
 
 [![clerk announcement](https://github.com/colinhacks/zod/assets/3084745/6327cf99-8d82-4b44-a5b1-ba2b5c2ff6ad)](https://go.clerk.com/hqN4rp7)
