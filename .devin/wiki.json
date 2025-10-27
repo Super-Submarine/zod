@@ -1,0 +1,369 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overview",
+      "purpose": "Introduce the Zod repository at a high level, explaining what Zod is, its purpose as a TypeScript-first schema validation library, and the overall structure of the repository",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Repository Structure",
+      "purpose": "Provide a comprehensive overview of the monorepo’s structure and organization. Document all packages (e.g., zod, docs, bench, core, examples, tests) with clear explanations of their roles, dependencies, and interactions. Describe how the workspace is organized, including directory layout, build tooling, dependency management, and shared configurations. Explain naming conventions, how packages are versioned and published, and how local development, testing, and CI/CD workflows operate within the monorepo. Include guidelines for adding new packages, maintaining consistency, and scaling the repository as it grows.",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Core Concepts",
+      "purpose": "Explain fundamental Zod concepts: schemas, validation, parsing, type inference, and the relationship between runtime validation and compile-time types",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Core Library Architecture",
+      "purpose": "Deep dive into the Zod library's internal architecture, explaining the multi-layer design (Core, Classic, Mini), schema type hierarchy, and validation engine",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema Type System",
+      "purpose": "Document the schema type hierarchy, including $ZodType base class, primitive types, complex types, and how schemas are constructed and initialized",
+      "parent": "Core Library Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Validation Pipeline",
+      "purpose": "Explain the validation flow from input through parse/safeParse methods, including synchronous vs asynchronous validation, check execution, and result generation",
+      "parent": "Core Library Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Type Inference System",
+      "purpose": "Document how Zod extracts TypeScript types from schemas using z.infer, z.input, z.output, and how this achieves compile-time type safety",
+      "parent": "Core Library Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema Definitions",
+      "purpose": "Comprehensive guide to defining schemas, covering all schema types (string, number, object, array, union, etc.) and their APIs",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Primitive Schemas",
+      "purpose": "Document string, number, boolean, bigint, date, and other primitive schema types, including their validation methods and format checks",
+      "parent": "Schema Definitions",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Complex Schemas",
+      "purpose": "Document object, array, tuple, union, intersection, and other complex schema types, including their composition patterns",
+      "parent": "Schema Definitions",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Validation Checks",
+      "purpose": "Explain the check system, including built-in checks (min, max, regex), format checks (email, UUID, URL), and custom refinements",
+      "parent": "Schema Definitions",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Schema Wrappers",
+      "purpose": "Document wrapper schemas that modify base schemas: optional, nullable, default, catch, transform, pipe, readonly",
+      "parent": "Schema Definitions",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Error Handling",
+      "purpose": "Comprehensive guide to error handling in Zod, covering ZodError structure, error customization, internationalization, and error precedence",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "ZodError Structure",
+      "purpose": "Document the ZodError class, issues array, error codes, and how validation failures are reported with detailed context",
+      "parent": "Error Handling",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Error Customization",
+      "purpose": "Explain how to customize error messages at different levels (schema, parse, global, locale) and the precedence hierarchy",
+      "parent": "Error Handling",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Internationalization",
+      "purpose": "Document the locale system with 40+ language support, how to use locale error maps, and deprecated locale aliases",
+      "parent": "Error Handling",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Advanced Features",
+      "purpose": "Cover advanced Zod features including codecs, JSON Schema conversion, and metadata system",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Codec System",
+      "purpose": "Explain the codec system for bidirectional transformations, including encode/decode operations, refinement chains, and type safety",
+      "parent": "Advanced Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "JSON Schema Conversion",
+      "purpose": "Document how to convert Zod schemas to JSON Schema format, supporting Draft 2020-12, Draft 7, and OpenAPI 3.0",
+      "parent": "Advanced Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Metadata and Registries",
+      "purpose": "Explain the schema registry system for associating metadata with schemas, including the global registry and custom registries",
+      "parent": "Advanced Features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "API Variants",
+      "purpose": "Document the different API surfaces Zod provides: Classic (full-featured), Mini (tree-shakable), and version differences (v3 vs v4)",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Classic API",
+      "purpose": "Document the Classic API (default) with its full feature set, method chaining patterns, and compatibility with v3",
+      "parent": "API Variants",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Mini API",
+      "purpose": "Explain the Mini API variant designed for tree-shaking and reduced bundle sizes, including its functional approach and differences from Classic",
+      "parent": "API Variants",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Version Migration",
+      "purpose": "Guide for migrating from Zod v3 to v4, covering breaking changes, new features, performance improvements, and versioning strategy",
+      "parent": "API Variants",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Build and Distribution",
+      "purpose": "Document the build system, compilation process, output formats, and distribution to NPM, JSR, and Deno",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Build System",
+      "purpose": "Explain the build pipeline using pnpm, tsdown compiler, stub package.json generation, and multi-format output (CJS, ESM, types)",
+      "parent": "Build and Distribution",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Package Structure",
+      "purpose": "Document the package.json configuration, module exports architecture (9 entry points), and how different formats are resolved",
+      "parent": "Build and Distribution",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "CI/CD Pipeline",
+      "purpose": "Explain the GitHub Actions workflows for testing, releasing (regular and canary), and deployment to multiple registries",
+      "parent": "Build and Distribution",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Testing and Benchmarking",
+      "purpose": "Document the test suite, benchmarking system for performance comparison, and quality assurance processes",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Test Suite",
+      "purpose": "Document the Vitest-based test suite, test organization, TypeScript version matrix testing, and coverage",
+      "parent": "Testing and Benchmarking",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Benchmark Suite",
+      "purpose": "Explain the benchmarking system comparing v3, v4, arktype, and valibot, including performance metrics and test scenarios",
+      "parent": "Testing and Benchmarking",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Ecosystem",
+      "purpose": "Overview of the Zod ecosystem including 30+ integrations, API libraries, form libraries, converters, and developer tools",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Integration Categories",
+      "purpose": "Document the seven integration categories: API libraries, form integrations, converters (Zod-to-X and X-to-Zod), mocking, projects, and utilities",
+      "parent": "Ecosystem",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Documentation Site",
+      "purpose": "Explain how the documentation site is built, including MDX content, component structure, and dynamic features like star fetching",
+      "parent": "Ecosystem",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Contributing",
+      "purpose": "Guide for contributors covering development setup, code quality standards, testing requirements, and contribution workflow",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Development Setup",
+      "purpose": "Instructions for setting up the development environment, including pnpm installation, dev containers, and the play.ts workflow",
+      "parent": "Contributing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Code Quality",
+      "purpose": "Document code quality tools and processes: pre-commit hooks (husky + lint-staged), biome linting/formatting, and TypeScript checks",
+      "parent": "Contributing",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
