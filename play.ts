@@ -1,5 +1,17 @@
-const test = () => 1;
+import { z } from "zod";
 
-test.something = () => 2;
+const HelloWorldSchema = z.object({
+  message: z.string(),
+  timestamp: z.date(),
+});
 
-test.something;
+type HelloWorld = z.infer<typeof HelloWorldSchema>;
+
+const helloWorld: HelloWorld = {
+  message: "Hello World",
+  timestamp: new Date(),
+};
+
+const result = HelloWorldSchema.parse(helloWorld);
+
+console.log(result.message);
