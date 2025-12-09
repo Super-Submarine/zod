@@ -9,6 +9,8 @@
 </p>
 <br/>
 
+<p align="center"><sub>Devin dummy draft PR verification (no functional changes).</sub></p>
+
 <p align="center">
 <a href="https://github.com/colinhacks/zod/actions?query=branch%3Amain"><img src="https://github.com/colinhacks/zod/actions/workflows/test.yml/badge.svg?event=push&branch=main" alt="Zod CI status" /></a>
 <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/colinhacks/zod" alt="License"></a>
