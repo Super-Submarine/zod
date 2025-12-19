@@ -50,6 +50,8 @@
 
 ### [Read the docs →](https://zod.dev/api)
 
+<!-- Verification test comment - Dec 19, 2025 -->
+
 <br/>
 <br/>
 
