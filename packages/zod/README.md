@@ -206,5 +206,3 @@ type MySchemaIn = z.input<typeof mySchema>;
 type MySchemaOut = z.output<typeof mySchema>; // equivalent to z.infer<typeof mySchema>
 // number
 ```
-
-<!-- Dummy test change for PR verification -->
