@@ -7,26 +7,16 @@
   "pages": [
     {
       "title": "Overview",
-      "purpose": "Introduce Zod as a TypeScript-first schema validation library, explaining its core philosophy ('parse, don't validate'), key features, and position in the ecosystem",
+      "purpose": "Introduce the Zod repository, explaining what Zod is, its purpose as a TypeScript-first schema validation library, and provide a high-level overview of the repository structure and key features",
       "page_notes": [
         {
-          "content": "testing 124"
+          "content": "should be highly detailed with erd diagrams for each part and responsibility"
         }
       ]
     },
     {
-      "title": "Getting Started",
-      "purpose": "Guide users through installation, basic setup, and first schema creation",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Installation",
-      "purpose": "Explain installation via npm/yarn/bun, discuss package exports (CJS/ESM/Deno), and TypeScript configuration requirements",
-      "parent": "Getting Started",
+      "title": "Core Architecture",
+      "purpose": "Deep dive into the fundamental architecture of Zod, covering the schema system, validation engine, and how they work together to provide runtime validation and static type inference",
       "page_notes": [
         {
           "content": ""
@@ -34,9 +24,9 @@
       ]
     },
     {
-      "title": "Basic Usage",
-      "purpose": "Demonstrate simple schema definition, parsing, and type inference with minimal examples",
-      "parent": "Getting Started",
+      "title": "Schema System",
+      "purpose": "Explain the core schema system, including how schemas are defined, the $ZodType interface, primitive and complex types, and the internal structure of schema instances",
+      "parent": "Core Architecture",
       "page_notes": [
         {
           "content": ""
@@ -44,8 +34,9 @@
       ]
     },
     {
-      "title": "Core Concepts",
-      "purpose": "Explain fundamental concepts: schemas as validators and type definitions, the parsing pipeline, and type inference",
+      "title": "Validation Engine",
+      "purpose": "Document the validation pipeline, including the parse/safeParse methods, synchronous vs asynchronous validation, check execution, and error generation",
+      "parent": "Core Architecture",
       "page_notes": [
         {
           "content": ""
@@ -53,9 +44,9 @@
       ]
     },
     {
-      "title": "Schemas and Validation",
-      "purpose": "Explain what schemas are, how they define both runtime validation and compile-time types, and the immutability principle",
-      "parent": "Core Concepts",
+      "title": "Type System and Inference",
+      "purpose": "Explain how Zod bridges TypeScript's static type system with runtime validation, covering z.infer, z.input, z.output, and the dual-layer type safety architecture",
+      "parent": "Core Architecture",
       "page_notes": [
         {
           "content": ""
@@ -63,9 +54,8 @@
       ]
     },
     {
-      "title": "Parsing Methods",
-      "purpose": "Document parse(), safeParse(), parseAsync(), and safeParseAsync(), explaining when to use each and their return types",
-      "parent": "Core Concepts",
+      "title": "API Variants",
+      "purpose": "Overview of the three different API surfaces Zod provides (Classic, Mini, and v3 Legacy) and guidance on which to use",
       "page_notes": [
         {
           "content": ""
@@ -73,9 +63,9 @@
       ]
     },
     {
-      "title": "Type Inference",
-      "purpose": "Explain z.infer, z.input, z.output, and how Zod enables deriving TypeScript types from runtime schemas",
-      "parent": "Core Concepts",
+      "title": "Classic API",
+      "purpose": "Document the method-chaining Classic API (z.string().min(5).email()), which is the default and most feature-rich interface",
+      "parent": "API Variants",
       "page_notes": [
         {
           "content": ""
@@ -83,8 +73,9 @@
       ]
     },
     {
-      "title": "Primitive Types",
-      "purpose": "Document all primitive schema types (string, number, boolean, date, bigint, symbol, etc.) and their validators",
+      "title": "Mini API",
+      "purpose": "Document the functional, tree-shakable Mini API, explaining its design philosophy, usage patterns, and when to choose it over Classic",
+      "parent": "API Variants",
       "page_notes": [
         {
           "content": ""
@@ -92,9 +83,9 @@
       ]
     },
     {
-      "title": "String Schemas",
-      "purpose": "Detail string validation methods: min, max, length, email, url, uuid, datetime, regex, and string transformations (trim, toLowerCase, etc.)",
-      "parent": "Primitive Types",
+      "title": "V3 Legacy API",
+      "purpose": "Explain the v3 API maintained for backward compatibility, migration path from v3 to v4, and breaking changes",
+      "parent": "API Variants",
       "page_notes": [
         {
           "content": ""
@@ -102,9 +93,8 @@
       ]
     },
     {
-      "title": "Number and BigInt Schemas",
-      "purpose": "Document numeric validation: min, max, int, positive, negative, multipleOf, finite, safe, and BigInt-specific methods",
-      "parent": "Primitive Types",
+      "title": "Advanced Features",
+      "purpose": "Overview of advanced Zod features including codecs, error customization, JSON Schema conversion, and metadata",
       "page_notes": [
         {
           "content": ""
@@ -112,9 +102,9 @@
       ]
     },
     {
-      "title": "Date and Other Primitives",
-      "purpose": "Cover date schemas, boolean, symbol, undefined, null, void, and special types (any, unknown, never)",
-      "parent": "Primitive Types",
+      "title": "Codecs and Bidirectional Transforms",
+      "purpose": "Document the codec system for bidirectional transformations, including encode/decode operations, type safety in transformations, and use cases",
+      "parent": "Advanced Features",
       "page_notes": [
         {
           "content": ""
@@ -122,8 +112,9 @@
       ]
     },
     {
-      "title": "Object Schemas",
-      "purpose": "Comprehensive guide to object schemas: definition, shape access, and unknown key handling strategies",
+      "title": "Error Customization and Localization",
+      "purpose": "Explain error customization mechanisms (schema-level, per-parse, global), the localization system with 40+ languages, and error precedence chain",
+      "parent": "Advanced Features",
       "page_notes": [
         {
           "content": ""
@@ -131,9 +122,9 @@
       ]
     },
     {
-      "title": "Defining Object Schemas",
-      "purpose": "Explain z.object(), .shape property, and basic object validation with nested schemas",
-      "parent": "Object Schemas",
+      "title": "JSON Schema Conversion",
+      "purpose": "Document the toJSONSchema() system, including the conversion pipeline, handling of different schema types, cycles and reuse, and configuration options",
+      "parent": "Advanced Features",
       "page_notes": [
         {
           "content": ""
@@ -141,9 +132,9 @@
       ]
     },
     {
-      "title": "Unknown Keys Handling",
-      "purpose": "Document .strict(), .passthrough(), .strip(), .catchall() and their effects on validation and type inference",
-      "parent": "Object Schemas",
+      "title": "Metadata and Registries",
+      "purpose": "Explain the metadata system, global and custom registries, and how to attach descriptions, examples, and custom metadata to schemas",
+      "parent": "Advanced Features",
       "page_notes": [
         {
           "content": ""
@@ -151,9 +142,8 @@
       ]
     },
     {
-      "title": "Object Manipulation Methods",
-      "purpose": "Detail .extend(), .merge(), .pick(), .omit(), .partial(), .deepPartial(), .required(), and .keyof()",
-      "parent": "Object Schemas",
+      "title": "Version Management",
+      "purpose": "Explain Zod's versioning strategy, including subpath exports, backward compatibility approach, and the v4 release",
       "page_notes": [
         {
           "content": ""
@@ -161,8 +151,9 @@
       ]
     },
     {
-      "title": "Collection Schemas",
-      "purpose": "Document schemas for collections: arrays, tuples, records, maps, and sets",
+      "title": "Versioning Strategy",
+      "purpose": "Document the subpath versioning approach (zod/v3, zod/v4, zod/v4/mini), shared core types, and how library authors can depend on Zod",
+      "parent": "Version Management",
       "page_notes": [
         {
           "content": ""
@@ -170,9 +161,9 @@
       ]
     },
     {
-      "title": "Arrays",
-      "purpose": "Explain z.array(), .element, .min/.max/.length, .nonempty, and array-specific validation",
-      "parent": "Collection Schemas",
+      "title": "V4 Release Notes",
+      "purpose": "Comprehensive documentation of Zod v4 features, performance improvements (14x faster parsing), breaking changes, and migration guide",
+      "parent": "Version Management",
       "page_notes": [
         {
           "content": ""
@@ -180,9 +171,8 @@
       ]
     },
     {
-      "title": "Tuples",
-      "purpose": "Document z.tuple(), fixed-length validation, .rest() for variadic tuples, and tuple type inference",
-      "parent": "Collection Schemas",
+      "title": "Repository Structure and Build System",
+      "purpose": "Explain the monorepo structure, package organization, and how the build system works",
       "page_notes": [
         {
           "content": ""
@@ -190,9 +180,9 @@
       ]
     },
     {
-      "title": "Records, Maps, and Sets",
-      "purpose": "Explain z.record() for Record<K,V> types, z.map() and z.set() for native JavaScript collections",
-      "parent": "Collection Schemas",
+      "title": "Monorepo Organization",
+      "purpose": "Document the pnpm workspace structure, packages within the monorepo (zod, docs, bench, treeshake, resolution, tsc), and their relationships",
+      "parent": "Repository Structure and Build System",
       "page_notes": [
         {
           "content": ""
@@ -200,8 +190,9 @@
       ]
     },
     {
-      "title": "Type Composition",
-      "purpose": "Document how to compose schemas using unions, intersections, enums, and literals",
+      "title": "Build Pipeline",
+      "purpose": "Explain the build process using zshy compiler, generation of multiple module formats (ESM, CJS, types), and the postbuild stub generation",
+      "parent": "Repository Structure and Build System",
       "page_notes": [
         {
           "content": ""
@@ -209,9 +200,9 @@
       ]
     },
     {
-      "title": "Unions",
-      "purpose": "Explain z.union(), .or() method, discriminated unions, and union type inference",
-      "parent": "Type Composition",
+      "title": "CI/CD and Release Automation",
+      "purpose": "Document the GitHub Actions workflows for testing, building, and releasing to npm and JSR, including normal releases vs canary releases",
+      "parent": "Repository Structure and Build System",
       "page_notes": [
         {
           "content": ""
@@ -219,9 +210,8 @@
       ]
     },
     {
-      "title": "Intersections",
-      "purpose": "Document z.intersection() and .and() method for combining schemas with AND logic",
-      "parent": "Type Composition",
+      "title": "Testing and Quality Assurance",
+      "purpose": "Overview of the testing strategy, including unit tests, benchmarking, and bundle size analysis",
       "page_notes": [
         {
           "content": ""
@@ -229,9 +219,9 @@
       ]
     },
     {
-      "title": "Enums and Literals",
-      "purpose": "Explain z.enum(), z.nativeEnum() for TypeScript enums, and z.literal() for single-value schemas",
-      "parent": "Type Composition",
+      "title": "Test Suite",
+      "purpose": "Document the test structure, testing patterns for schemas and validation, and how tests are organized across API variants",
+      "parent": "Testing and Quality Assurance",
       "page_notes": [
         {
           "content": ""
@@ -239,8 +229,9 @@
       ]
     },
     {
-      "title": "Schema Modifiers",
-      "purpose": "Document wrapper schemas that modify behavior: optional, nullable, default, and branded types",
+      "title": "Benchmarking System",
+      "purpose": "Explain the benchmarking suite in packages/bench, comparison methodology across Zod versions and competitor libraries, and performance metrics",
+      "parent": "Testing and Quality Assurance",
       "page_notes": [
         {
           "content": ""
@@ -248,9 +239,8 @@
       ]
     },
     {
-      "title": "Optional and Nullable",
-      "purpose": "Explain .optional(), .nullable(), .nullish(), and their effects on type inference and validation",
-      "parent": "Schema Modifiers",
+      "title": "Ecosystem and Integration",
+      "purpose": "Overview of the Zod ecosystem, including community integrations, how to integrate Zod into libraries, and the ecosystem documentation",
       "page_notes": [
         {
           "content": ""
@@ -258,9 +248,9 @@
       ]
     },
     {
-      "title": "Default Values",
-      "purpose": "Document .default() for static and dynamic defaults, explaining when defaults are applied in the pipeline",
-      "parent": "Schema Modifiers",
+      "title": "Ecosystem Overview",
+      "purpose": "Catalog of 70+ ecosystem resources including API libraries (tRPC, oRPC), form integrations, converters, mocking libraries, and utilities",
+      "parent": "Ecosystem and Integration",
       "page_notes": [
         {
           "content": ""
@@ -268,9 +258,9 @@
       ]
     },
     {
-      "title": "Branded Types and Readonly",
-      "purpose": "Explain .brand() for nominal typing and .readonly() for immutable type inference",
-      "parent": "Schema Modifiers",
+      "title": "Library Authors Guide",
+      "purpose": "Comprehensive guide for library authors on integrating Zod, including peer dependency configuration, supporting multiple Zod versions, and accepting user-defined schemas",
+      "parent": "Ecosystem and Integration",
       "page_notes": [
         {
           "content": ""
@@ -278,321 +268,8 @@
       ]
     },
     {
-      "title": "Transformations and Refinements",
-      "purpose": "Document how to add custom validation and data transformation logic to schemas",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Refinements",
-      "purpose": "Explain .refine() and .superRefine() for custom validation, including ctx.addIssue and async refinements",
-      "parent": "Transformations and Refinements",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Transformations",
-      "purpose": "Document .transform() for data modification, explaining input/output type duality, sync/async transforms, and z.NEVER",
-      "parent": "Transformations and Refinements",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Preprocessing and Pipelines",
-      "purpose": "Explain z.preprocess() for pre-validation transformations and .pipe() for chaining schemas",
-      "parent": "Transformations and Refinements",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Coercion",
-      "purpose": "Document z.coerce.string(), z.coerce.number(), etc. for automatic type conversion before validation",
-      "parent": "Transformations and Refinements",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Error Handling",
-      "purpose": "Comprehensive guide to Zod's error system: ZodError, ZodIssue, error maps, and error formatting",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "ZodError and ZodIssue",
-      "purpose": "Explain the structure of ZodError, the ZodIssue discriminated union, and ZodIssueCode types",
-      "parent": "Error Handling",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Error Maps and Custom Messages",
-      "purpose": "Document the error map priority chain (default → global → schema → contextual) and z.setErrorMap()",
-      "parent": "Error Handling",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Error Formatting",
-      "purpose": "Explain .format() for nested errors, .flatten() for flat field errors, and type inference utilities",
-      "parent": "Error Handling",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Advanced Schema Types",
-      "purpose": "Document specialized schema types: functions, promises, instanceof, and custom schemas",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Function Schemas",
-      "purpose": "Explain z.function(), .args(), .returns(), .implement(), and function schema validation",
-      "parent": "Advanced Schema Types",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Promise Schemas",
-      "purpose": "Document z.promise() and .promise() method, explaining async validation and two-phase parsing",
-      "parent": "Advanced Schema Types",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Instance Validation and Custom Schemas",
-      "purpose": "Explain z.instanceof() for class instances and z.custom() for defining schemas for custom TypeScript types",
-      "parent": "Advanced Schema Types",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Internal Architecture",
-      "purpose": "Deep dive into Zod's implementation: parsing pipeline, type system, and error generation",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Parse Pipeline and Context",
-      "purpose": "Explain ParseContext, ParseStatus, ParseInput, and the complete parsing lifecycle from input to result",
-      "parent": "Internal Architecture",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "ZodType Base Class and Subclasses",
-      "purpose": "Document the ZodType abstract base class, _parse method signature, and how specific types extend it",
-      "parent": "Internal Architecture",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Issue Generation and Error Map Resolution",
-      "purpose": "Explain makeIssue, addIssueToContext, and the error map priority resolution chain",
-      "parent": "Internal Architecture",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Type Utilities and Helpers",
-      "purpose": "Document util and objectUtil namespaces, getParsedType, and ZodParsedType enumeration",
-      "parent": "Internal Architecture",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Project Structure and Build System",
-      "purpose": "Explain repository organization, build configuration, and distribution strategy",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Repository Structure",
-      "purpose": "Document directory layout: src/, lib/, deno/lib/, test organization, and configuration files",
-      "parent": "Project Structure and Build System",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Build Targets and Compilation",
-      "purpose": "Explain build process: TypeScript compilation to CJS/ESM, Rollup bundling, and Deno-specific builds",
-      "parent": "Project Structure and Build System",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Package Exports and Module Formats",
-      "purpose": "Document package.json exports field, module/main/types configuration, and how consumers import Zod",
-      "parent": "Project Structure and Build System",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Development Workflow",
-      "purpose": "Guide contributors through development setup, testing, and code quality tools",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Testing Infrastructure",
-      "purpose": "Document test setup (Jest, Vitest, Deno), running tests, and test organization patterns",
-      "parent": "Development Workflow",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Code Quality Tools",
-      "purpose": "Explain ESLint configuration, Prettier setup, Husky pre-commit hooks, and lint-staged",
-      "parent": "Development Workflow",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Local Development Scripts",
-      "purpose": "Document yarn scripts: build, test, lint, playground, and their usage during development",
-      "parent": "Development Workflow",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "CI/CD and Release Process",
-      "purpose": "Explain automated testing, release workflows, and publication to npm",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Continuous Integration",
-      "purpose": "Document test.yml workflow: matrix testing across Node.js/TypeScript versions, Deno testing, and linting",
-      "parent": "CI/CD and Release Process",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Release Workflows",
-      "purpose": "Explain stable release workflow (package.json triggers) vs canary releases (source change triggers)",
-      "parent": "CI/CD and Release Process",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Multi-Platform Distribution",
-      "purpose": "Document npm publication, Deno repository synchronization, and GitHub releases with changelogs",
-      "parent": "CI/CD and Release Process",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Version History and Migration",
-      "purpose": "Document major version changes, breaking changes, and migration guides based on CHANGELOG",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Zod 3.x Evolution",
-      "purpose": "Summarize key changes across Zod 3.x versions: new features, API improvements, and architectural changes",
-      "parent": "Version History and Migration",
-      "page_notes": [
-        {
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "Zod 4 Development",
-      "purpose": "Document Zod 4 roadmap, Clerk fellowship, planned breaking changes, and new features",
-      "parent": "Version History and Migration",
+      "title": "Contributing to Zod",
+      "purpose": "Guide for contributors covering development setup, contribution workflow, coding standards, and how to submit pull requests",
       "page_notes": [
         {
           "content": ""
