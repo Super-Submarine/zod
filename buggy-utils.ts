@@ -10,7 +10,7 @@ export function getLastElement<T>(arr: T[]): T {
 
 // Bug 2: Missing null check - will throw on undefined input
 export function getUserDisplayName(user: { firstName: string; lastName?: string }): string {
-  return user.firstName + " " + user.lastName.toUpperCase();
+  return user.firstName + (user.lastName ? " " + user.lastName.toUpperCase() : "");
 }
 
 // Bug 3: Incorrect comparison (using assignment instead of equality)
