@@ -4,7 +4,8 @@
 
 // Bug 1: Off-by-one error in array processing
 export function getLastElement<T>(arr: T[]): T {
-  return arr[arr.length];
+  return arr[arr.length - 1];
+
 }
 
 // Bug 2: Missing null check - will throw on undefined input
