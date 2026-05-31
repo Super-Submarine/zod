@@ -2,9 +2,11 @@
   <img src="logo.svg" width="200px" align="center" alt="Zod logo" />
   <h1 align="center">Zod</h1>
   <p align="center">
-    TypeScript-first schema validation with static type inference
+    TypeScript-first schema validation with static type inference.
+
     <br/>
     by <a href="https://x.com/colinhacks">@colinhacks</a>
+
   </p>
 </p>
 <br/>
