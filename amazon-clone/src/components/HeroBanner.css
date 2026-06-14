@@ -1,0 +1,130 @@
+.hero {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  margin-bottom: -80px;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.hero__slide--active {
+  opacity: 1;
+}
+
+.hero__content {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  z-index: 2;
+}
+.hero__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.hero__subtitle {
+  font-size: 16px;
+  margin: 0 0 20px;
+  opacity: 0.9;
+}
+.hero__cta {
+  background: #ffd814;
+  color: #0f1111;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.hero__cta:hover {
+  background: #f7ca00;
+}
+
+.hero__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 80px;
+  width: 60px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.hero__arrow:hover {
+  opacity: 1;
+}
+.hero__arrow--left {
+  left: 0;
+}
+.hero__arrow--right {
+  right: 0;
+}
+
+.hero__dots {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+.hero__dot--active {
+  background: #fff;
+  border-color: #fff;
+}
+
+.hero__fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #e3e6e6);
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 240px;
+    margin-bottom: -50px;
+  }
+  .hero__title {
+    font-size: 24px;
+  }
+  .hero__subtitle {
+    font-size: 14px;
+  }
+  .hero__arrow {
+    width: 36px;
+  }
+  .hero__fade {
+    height: 60px;
+  }
+}
