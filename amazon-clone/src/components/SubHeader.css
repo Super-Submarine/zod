@@ -1,0 +1,22 @@
+.subheader {
+  background-color: #232f3e;
+  padding: 4px 16px;
+}
+
+.subheader__links {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.subheader__link {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 4px 0;
+}
+
+.subheader__link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+.orders {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.orders__title {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.orders__empty {
+  background: white;
+  padding: 40px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.orders__empty p {
+  margin-bottom: 8px;
+  color: #565959;
+}
+
+.orders__empty a {
+  color: #007185;
+  text-decoration: none;
+}
+
+.orders__empty a:hover {
+  text-decoration: underline;
+}
