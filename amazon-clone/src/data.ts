@@ -1,4 +1,4 @@
-import { Product } from "./types";
+import type { Product } from "./types";
 
 export const products: Product[] = [
   {
@@ -23,7 +23,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    title: "Kindle Paperwhite (16 GB) - Now with 6.8\" display",
+    title: 'Kindle Paperwhite (16 GB) - Now with 6.8" display',
     price: 139.99,
     rating: 4.6,
     reviewCount: 87432,
