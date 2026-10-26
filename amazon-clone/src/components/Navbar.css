@@ -1,0 +1,243 @@
+/* ===== Top Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #131921;
+  color: #fff;
+  padding: 8px 16px;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__logo {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.navbar__logo:hover {
+  border-color: #fff;
+}
+.navbar__logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.navbar__logo-suffix {
+  font-size: 14px;
+  color: #ff9900;
+  font-weight: 600;
+}
+
+.navbar__delivery {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.navbar__delivery:hover {
+  border-color: #fff;
+}
+.navbar__delivery div {
+  display: flex;
+  flex-direction: column;
+}
+.navbar__delivery-label {
+  font-size: 11px;
+  color: #ccc;
+}
+.navbar__delivery-location {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ===== Search Bar ===== */
+.navbar__search {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.navbar__search-input {
+  flex: 1;
+  border: none;
+  padding: 0 12px;
+  font-size: 15px;
+  outline: none;
+  min-width: 0;
+}
+.navbar__search-btn {
+  background: #febd69;
+  border: none;
+  padding: 0 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.navbar__search-btn:hover {
+  background: #f3a847;
+}
+
+/* ===== Actions ===== */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.navbar__link {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.navbar__link:hover {
+  border-color: #fff;
+}
+.navbar__link-label {
+  font-size: 11px;
+  color: #ccc;
+}
+.navbar__link-value {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.navbar__cart {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  position: relative;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.navbar__cart:hover {
+  border-color: #fff;
+}
+.navbar__cart-count {
+  position: absolute;
+  top: -2px;
+  left: 22px;
+  background: #f08804;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 18px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0 4px;
+}
+.navbar__cart-label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* ===== Sub-Navbar ===== */
+.sub-navbar {
+  background: #232f3e;
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  gap: 2px;
+  overflow-x: auto;
+}
+.sub-navbar::-webkit-scrollbar {
+  display: none;
+}
+.sub-navbar__btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.sub-navbar__btn:hover,
+.sub-navbar__link:hover {
+  border-color: #fff;
+}
+.sub-navbar__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.sub-navbar__deal {
+  color: #f08804 !important;
+  font-weight: 700;
+}
+
+/* ===== Mobile Menu ===== */
+.navbar__mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #232f3e;
+  padding: 8px 16px;
+}
+.navbar__mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #3b4957;
+  font-size: 15px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .navbar__delivery,
+  .navbar__actions .navbar__link {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar__hamburger {
+    display: block;
+  }
+  .navbar__actions {
+    display: none;
+  }
+  .navbar__mobile-menu {
+    display: flex;
+  }
+  .sub-navbar {
+    display: none;
+  }
+}

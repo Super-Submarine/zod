@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  background: #e3e6e6;
+  color: #0f1111;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+}
+
+.star--filled {
+  color: #ffa41c;
+  fill: #ffa41c;
+}
+.star--empty {
+  color: #ddd;
+}
+.prime-badge {
+  color: #007185;
+  font-weight: 700;
+  font-style: italic;
+}
