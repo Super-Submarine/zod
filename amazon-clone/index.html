@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="#">
+                    <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" class="logo">
+                </a>
+            </div>
+            <div class="nav-address">
+                <p class="address-first">Deliver to</p>
+                <div class="address-second">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>United States</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Books</option>
+                    <option>Fashion</option>
+                    <option>Home & Kitchen</option>
+                    <option>Sports</option>
+                </select>
+                <input type="text" class="search-input" placeholder="Search Amazon">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="nav-signin">
+                <p class="nav-first">Hello, sign in</p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-returns">
+                <p class="nav-first">Returns</p>
+                <p class="nav-second">& Orders</p>
+            </div>
+            <div class="nav-cart" id="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cart-count">0</span>
+                <p>Cart</p>
+            </div>
+        </nav>
+        <div class="sub-navbar">
+            <ul>
+                <li><i class="fa-solid fa-bars"></i> All</li>
+                <li>Today's Deals</li>
+                <li>Customer Service</li>
+                <li>Registry</li>
+                <li>Gift Cards</li>
+                <li>Sell</li>
+            </ul>
+            <p class="sub-nav-right">Shop deals in Electronics</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <div class="hero-section">
+            <div class="hero-message">
+                <p>You are on amazon.com. You can also shop on Amazon for millions of products with fast local delivery. <a href="#">Click here to go to amazon.com</a></p>
+            </div>
+            <div class="hero-slider" id="hero-slider">
+                <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1400&h=400&fit=crop');">
+                </div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&h=400&fit=crop');">
+                </div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&h=400&fit=crop');">
+                </div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1400&h=400&fit=crop');">
+                </div>
+            </div>
+            <button class="slider-btn slider-btn-left" id="slider-left"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn slider-btn-right" id="slider-right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Category Cards -->
+        <section class="category-section">
+            <div class="category-card">
+                <h3>Deals in Electronics</h3>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200&h=200&fit=crop" alt="Phone">
+                        <p>Phones</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&h=200&fit=crop" alt="Laptop">
+                        <p>Laptops</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1546868871-af0de0ae72be?w=200&h=200&fit=crop" alt="Tablet">
+                        <p>Tablets</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=200&h=200&fit=crop" alt="Headphones">
+                        <p>Headphones</p>
+                    </div>
+                </div>
+                <a href="#" class="see-more">See more</a>
+            </div>
+            <div class="category-card">
+                <h3>Shop by Category</h3>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop" alt="Watches">
+                        <p>Watches</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=200&h=200&fit=crop" alt="Shoes">
+                        <p>Shoes</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop" alt="Bags">
+                        <p>Bags</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=200&h=200&fit=crop" alt="Sunglasses">
+                        <p>Sunglasses</p>
+                    </div>
+                </div>
+                <a href="#" class="see-more">See more</a>
+            </div>
+            <div class="category-card">
+                <h3>Home & Kitchen</h3>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&h=200&fit=crop" alt="Kitchen">
+                        <p>Kitchen</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=200&h=200&fit=crop" alt="Living Room">
+                        <p>Living Room</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=200&h=200&fit=crop" alt="Bedroom">
+                        <p>Bedroom</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=200&h=200&fit=crop" alt="Bathroom">
+                        <p>Bathroom</p>
+                    </div>
+                </div>
+                <a href="#" class="see-more">See more</a>
+            </div>
+            <div class="category-card">
+                <h3>Gaming Accessories</h3>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=200&h=200&fit=crop" alt="Controllers">
+                        <p>Controllers</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=200&h=200&fit=crop" alt="Headsets">
+                        <p>Headsets</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=200&h=200&fit=crop" alt="Keyboards">
+                        <p>Keyboards</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=200&h=200&fit=crop" alt="Mice">
+                        <p>Mice</p>
+                    </div>
+                </div>
+                <a href="#" class="see-more">See more</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <h2 class="section-title">Today's Deals</h2>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be injected by JS -->
+            </div>
+        </section>
+
+        <!-- Recommended Section -->
+        <section class="products-section">
+            <h2 class="section-title">Recommended for You</h2>
+            <div class="products-grid" id="recommended-grid">
+                <!-- Products will be injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close" id="cart-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <a href="#">Back to top</a>
+        </div>
+        <div class="footer-main">
+            <div class="footer-column">
+                <h4>Get to Know Us</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amazon Devices</a></li>
+                    <li><a href="#">Amazon Science</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Make Money with Us</h4>
+                <ul>
+                    <li><a href="#">Sell products on Amazon</a></li>
+                    <li><a href="#">Sell on Amazon Business</a></li>
+                    <li><a href="#">Sell apps on Amazon</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Self-Publish with Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Amazon Payment Products</h4>
+                <ul>
+                    <li><a href="#">Amazon Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                    <li><a href="#">Amazon Currency Converter</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Let Us Help You</h4>
+                <ul>
+                    <li><a href="#">Amazon and COVID-19</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" class="footer-logo">
+            <p>&copy; 2026 Amazon Clone. For demonstration purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
