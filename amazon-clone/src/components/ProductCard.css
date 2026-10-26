@@ -1,0 +1,127 @@
+.product-card {
+  background: white;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product-card__image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin-bottom: 12px;
+}
+
+.product-card__image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card__title {
+  font-size: 14px;
+  color: #0f1111;
+  text-decoration: none;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.product-card__title:hover {
+  color: #c7511f;
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.product-card__reviews {
+  font-size: 12px;
+  color: #007185;
+}
+
+.product-card__price {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.product-card__price-symbol {
+  font-size: 12px;
+  position: relative;
+  top: 2px;
+}
+
+.product-card__price-whole {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.product-card__price-fraction {
+  font-size: 12px;
+  position: relative;
+  top: 2px;
+}
+
+.product-card__prime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.prime-badge {
+  background: #232f3e;
+  color: #00a8e1;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  padding: 1px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+}
+
+.prime-delivery {
+  font-size: 12px;
+  color: #0f1111;
+}
+
+.product-card__add-btn {
+  margin-top: auto;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid #a88734;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.product-card__add-btn:hover {
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
+}
+
+.product-card__add-btn:active {
+  background: #f0c14b;
+  box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+}

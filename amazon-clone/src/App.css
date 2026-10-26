@@ -1,0 +1,35 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__main {
+  flex: 1;
+  background-color: #eaeded;
+}
+
+.app__footer {
+  margin-top: auto;
+}
+
+.footer__back-to-top {
+  background: #37475a;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.footer__back-to-top:hover {
+  background: #485769;
+}
+
+.footer__content {
+  background: #131a22;
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}

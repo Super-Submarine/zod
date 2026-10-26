@@ -1,0 +1,135 @@
+.home {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.home__banner {
+  background: linear-gradient(135deg, #232f3e 0%, #37475a 100%);
+  padding: 40px 24px;
+  text-align: center;
+  color: white;
+}
+
+.home__banner-content h1 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.home__banner-content p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.home__categories {
+  display: flex;
+  gap: 8px;
+  padding: 16px 24px;
+  overflow-x: auto;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.home__category-btn {
+  padding: 8px 20px;
+  border: 1px solid #d5d9d9;
+  border-radius: 20px;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #0f1111;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.home__category-btn:hover {
+  background: #f7fafa;
+  border-color: #007185;
+  color: #007185;
+}
+
+.home__category-btn--active {
+  background: #131921;
+  color: white;
+  border-color: #131921;
+}
+
+.home__category-btn--active:hover {
+  background: #232f3e;
+  border-color: #232f3e;
+  color: white;
+}
+
+.home__search-info {
+  padding: 12px 24px;
+  font-size: 14px;
+  color: #565959;
+}
+
+.home__featured {
+  padding: 20px 24px 0;
+}
+
+.home__featured-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.featured-card {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.featured-card h3 {
+  font-size: 18px;
+  color: #0f1111;
+  margin-bottom: 8px;
+}
+
+.featured-card p {
+  font-size: 14px;
+  color: #565959;
+  margin-bottom: 12px;
+}
+
+.featured-card__link {
+  font-size: 13px;
+  color: #007185;
+  cursor: pointer;
+}
+
+.featured-card__link:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.home__products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 20px 24px 40px;
+}
+
+@media (max-width: 1024px) {
+  .home__featured-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .home__featured-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home__products {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .home__banner-content h1 {
+    font-size: 22px;
+  }
+}
